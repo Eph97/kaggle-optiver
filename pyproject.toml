@@ -1,0 +1,36 @@
+# Using poetry 1.5.1. Possible forward-compatibility issue with poetry ">2.0"
+[tool.poetry]
+name = "kaggle-optiver"
+version = "0.1.0"
+description = "Optiver's Kaggle Challenge, Fall 2023"
+authors = ["Ephraim Sutherland <ephraim.sutherland@gmail.com>", "Vinicius Costa <cantovinicius@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8,<3.11"
+pandas = "^1.4.4"
+numpy = "^1.21.6"
+pyyaml = ">=5.3.1"
+
+# ML libs (hard constraints)
+scikit-learn = "^1.2.0"
+optuna = "^3.1.0"
+mlflow = "^2.2.2"
+
+# other libs
+boto3 = "^1.26.98"
+llvmlite = "^0.38.1"
+fsspec = "^2023.1.0"
+kaggle = "^1.5.16"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.16.0"
+black = {version = "^22.10.0", allow-prereleases = true}
+pdoc3 = "^0.10.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.3.1"
+pytest-cov = "^3.0.0"
+coverage = "^6.4.4"
+pylint = "^2.15.3"
+flake8 = "^5.0.4"
