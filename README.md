@@ -5,8 +5,8 @@ must have [poetry](https://python-poetry.org/) installed.
 to create a virtual environment run
 
 ```
-python3.8 -m venv tutorial_env
-source tutorial_env/bin/activate
+python3.10 -m venv optiver_env
+source optiver_env/bin/activate
 ```
 
 and to install packages run
