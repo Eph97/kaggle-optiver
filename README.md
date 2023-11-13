@@ -22,3 +22,10 @@ kaggle competitions download -c optiver-trading-at-the-close
 ```
 
 After unzipping this, the project should be working
+
+to get your kernel registered within vscode, while inside the virtual environment you may also need to install the proper kernel.
+
+TO do this run
+```
+python3 -m ipykernel install --user --name=optiver_env
+```
