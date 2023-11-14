@@ -15,7 +15,7 @@ and to install packages run
 poetry lock
 poetry install
 ```
-Finally, if you have the kaggle [CLI api installed](https://github.com/Kaggle/kaggle-api), then you can run
+Finally, if you have the kaggle [CLI api installed](https://github.com/Kaggle/kaggle-api), then, inside kaggle_optiver, you can run
 
 ```
 kaggle competitions download -c optiver-trading-at-the-close
@@ -29,3 +29,4 @@ TO do this run
 ```
 python3 -m ipykernel install --user --name=optiver_env
 ```
+
