@@ -161,3 +161,7 @@ cython_debug/
 poetry.lock
 
 *.zip
+
+public_timeseries_testing_util.py
+
+optiver2023/
