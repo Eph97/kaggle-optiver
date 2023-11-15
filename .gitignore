@@ -155,4 +155,9 @@ cython_debug/
 
 *.csv
 
-tutorial_env/
+
+*_env/
+
+poetry.lock
+
+*.zip
