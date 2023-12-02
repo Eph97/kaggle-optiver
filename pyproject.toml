@@ -22,6 +22,7 @@ boto3 = "^1.26.98"
 llvmlite = "^0.38.1"
 fsspec = "^2023.1.0"
 kaggle = "^1.5.16"
+nbdime = "^4.0.1"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.16.0"
