@@ -1,0 +1,73 @@
+lightgbm.LGBMRegressor:
+  # n_trials: 5
+  n_trials: 2
+  hyperparameters:
+    n_estimators:
+      distribution_type: optuna.distributions.IntDistribution
+      distribution_kwargs:
+        low: 4
+        high: 20
+        step: 4
+    max_depth:
+      distribution_type: optuna.distributions.IntDistribution
+      distribution_kwargs:
+        low: 4
+        high: 10
+        step: 1
+    num_leaves:
+      distribution_type: optuna.distributions.IntDistribution
+      distribution_kwargs:
+        low: 16
+        high: 160
+        step: 16
+    learning_rate:
+      distribution_type: optuna.distributions.FloatDistribution
+      distribution_kwargs:
+        low: .05
+        high: 1.
+        step: .05
+    reg_lambda:
+      distribution_type: optuna.distributions.FloatDistribution
+      distribution_kwargs:
+        low: 0.
+        high: 1.
+        step: .05
+    boosting_type:
+      distribution_type: optuna.distributions.CategoricalDistribution
+      distribution_kwargs:
+        choices:
+          - gbdt
+          - dart
+    subsample:
+      distribution_type: optuna.distributions.FloatDistribution
+      distribution_kwargs:
+        low: .3
+        high: 1.
+        step: .1
+    colsample_bytree:
+      distribution_type: optuna.distributions.FloatDistribution
+      distribution_kwargs:
+        low: .4
+        high: 1.
+        step: .1
+    reg_alpha:
+      distribution_type: optuna.distributions.FloatDistribution
+      distribution_kwargs:
+        low: 0.
+        high: 1.
+        step: .05
+    force_row_wise:
+      distribution_type: optuna.distributions.CategoricalDistribution
+      distribution_kwargs:
+        choices:
+          - True
+    n_jobs:
+      distribution_type: optuna.distributions.CategoricalDistribution
+      distribution_kwargs:
+        choices:
+          - -1
+    random_state:
+      distribution_type: optuna.distributions.CategoricalDistribution
+      distribution_kwargs:
+        choices:
+          - 42
