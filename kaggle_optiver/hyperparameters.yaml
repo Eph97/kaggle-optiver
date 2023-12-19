@@ -1,6 +1,6 @@
 lightgbm.LGBMRegressor:
-  # n_trials: 5
-  n_trials: 2
+  n_trials: 10
+  # n_trials: 2
   hyperparameters:
     n_estimators:
       distribution_type: optuna.distributions.IntDistribution

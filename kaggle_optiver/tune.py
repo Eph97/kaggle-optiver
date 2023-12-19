@@ -95,7 +95,7 @@ class TuningSession:
                     estimator=estimator,
                     X=transformed_data,
                     y=y,
-                    cv=None,
+                    cv=None,  # None my default gives 5-fold cross-validation
                     method="predict",
                 ),
             )
@@ -126,7 +126,7 @@ class TuningSession:
         transformed_data = data
         y = labels
         key_values = self._config_parser().items()
-        # backtests_master_dict = {}
+        self.backtests_dict = {}
 
         for classifier_name, config_for_classifier in key_values:
             logging.info(f"Starting {classifier_name}'s study")
@@ -140,7 +140,7 @@ class TuningSession:
             )
             study.optimize(func=objective, n_trials=n_trials)
 
-            # backtests_master_dict[classifier_name] = self._backtests_dict
+            self.backtests_dict[classifier_name] = study.trials_dataframe()
 
             filepath = f"trials_{classifier_name}.csv"
             study.trials_dataframe().to_csv(
