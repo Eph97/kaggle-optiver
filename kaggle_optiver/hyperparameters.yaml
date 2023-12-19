@@ -71,3 +71,65 @@ lightgbm.LGBMRegressor:
       distribution_kwargs:
         choices:
           - 42
+
+
+sklearn.ensemble.RandomForestRegressor:
+  n_trials: 50
+  # n_trials: 2
+  hyperparameters:
+    max_depth:
+    # done
+      distribution_type: optuna.distributions.IntDistribution
+      distribution_kwargs:
+        low: 2
+        high: 7
+        step: 1
+    # min_samples_split:
+    # # may refers to number of assets?
+    #   distribution_type: optuna.distributions.IntDistribution
+    #   distribution_kwargs:
+    #     low: 2
+    #     high: 10
+    #     step: 2
+    # min_weight_fraction_leaf:
+    # # done
+    #   distribution_type: optuna.distributions.FloatDisribution
+    #   distribution_kwargs:
+    #     low: 0.01
+    #     high: 0.2
+    #     step: 0.01
+    # the following four came suggestion of Fiuza
+    # min_samples_leaf:
+    #   distribution_type: optuna.distributions.IntDistribution
+    #   distribution_kwargs:
+    #     low: 4
+    #     high: 20
+    #     step: 4
+    # max_leaf_nodes:
+    #   distribution_type: optuna.distributions.IntDistribution
+    #   distribution_kwargs:
+    #     low: 4
+    #     high: 28
+    #     step: 4
+    # min_impurity_decrease:
+    #   distribution_type: optuna.distributions.FloatDistribution
+    #   distribution_kwargs:
+    #     low: 0.01
+    #     high: 0.2
+    # ccp_alpha:
+    #   distribution_type: optuna.distributions.FloatDistribution
+    #   distribution_kwargs:
+    #     low: 0.01
+    #     high: 0.4
+    n_jobs:
+    # done
+      distribution_type: optuna.distributions.CategoricalDistribution
+      distribution_kwargs:
+        choices:
+          - -1
+    random_state:
+    # done
+      distribution_type: optuna.distributions.CategoricalDistribution
+      distribution_kwargs:
+        choices:
+          - 42
