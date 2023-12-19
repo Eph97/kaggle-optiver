@@ -126,7 +126,7 @@ class TuningSession:
         transformed_data = data
         y = labels
         key_values = self._config_parser().items()
-        self.backtests_dict = {}
+        self.trials_dict = {}
 
         for classifier_name, config_for_classifier in key_values:
             logging.info(f"Starting {classifier_name}'s study")
@@ -140,7 +140,7 @@ class TuningSession:
             )
             study.optimize(func=objective, n_trials=n_trials)
 
-            self.backtests_dict[classifier_name] = study.trials_dataframe()
+            self.trials_dict[classifier_name] = study.trials_dataframe()
 
             filepath = f"trials_{classifier_name}.csv"
             study.trials_dataframe().to_csv(
