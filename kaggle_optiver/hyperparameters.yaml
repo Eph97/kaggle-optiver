@@ -11,9 +11,9 @@ lightgbm.LGBMRegressor:
     max_depth:
       distribution_type: optuna.distributions.IntDistribution
       distribution_kwargs:
-        low: 4
-        high: 10
-        step: 1
+        low: 200
+        high: 600
+        step: 100
     num_leaves:
       distribution_type: optuna.distributions.IntDistribution
       distribution_kwargs:
