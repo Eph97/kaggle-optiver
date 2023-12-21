@@ -1,5 +1,5 @@
 lightgbm.LGBMRegressor:
-  n_trials: 10
+  n_trials: 50
   # n_trials: 2
   hyperparameters:
     n_estimators:
@@ -98,7 +98,6 @@ sklearn.ensemble.RandomForestRegressor:
     #     low: 0.01
     #     high: 0.2
     #     step: 0.01
-    # the following four came suggestion of Fiuza
     # min_samples_leaf:
     #   distribution_type: optuna.distributions.IntDistribution
     #   distribution_kwargs:
