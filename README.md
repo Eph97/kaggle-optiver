@@ -1,4 +1,4 @@
-# kaggle-optiver
+# Setup
 
 must have [poetry](https://python-poetry.org/) installed.
 
