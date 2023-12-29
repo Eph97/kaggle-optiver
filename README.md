@@ -1,4 +1,4 @@
-# kaggle-optiver
+# Setup
 
 must have [poetry](https://python-poetry.org/) installed.
 
@@ -29,4 +29,7 @@ TO do this run
 ```
 python3 -m ipykernel install --user --name=optiver_env
 ```
+## Features
+
+While we test our own features, many of our most successful features come from or are inspired by [this paper](https://www.nber.org/system/files/working_papers/w30366/w30366.pdf) on predicting short-term returns. While their paper studies this predictive ability in continuous markets, we find that many of these features also have strong predictive power for the closing cross.
 
