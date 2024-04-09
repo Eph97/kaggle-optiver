@@ -1,4 +1,4 @@
-Current Team: Ephraim Sutherland, [Vinicious Canto Costa](https://www.math.stonybrook.edu/~vcantocosta/)
+Team Members: Ephraim Sutherland, [Vinicious Canto Costa](https://www.math.stonybrook.edu/~vcantocosta/)
 
 # Setup
 
