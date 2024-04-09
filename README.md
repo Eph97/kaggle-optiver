@@ -1,3 +1,5 @@
+Current Team: Ephraim Sutherland, [Vinicious Canto Costa](https://www.math.stonybrook.edu/~vcantocosta/)
+
 # Setup
 
 must have [poetry](https://python-poetry.org/) installed.
